@@ -20,4 +20,8 @@ public class Constantes {
 	//////////////////////////////////////////////////// INFORMATIONS POUR LES TESTS ////////////////////////////////////////////////////////////
 	public static final String URL_GOOGLE = PropertiesOutil.getInfoConstante("URL_TEST");
 	public static final String TITRE_PAGE = "Google";
+	
+	//// Exemple pour samy crédit ////
+	public static final String URL_SAMY_FATIMA = PropertiesOutil.getInfoConstante("URL_SAMY");
+	public static final String TITRE_PAGE_SAMY = "Instant";
 }

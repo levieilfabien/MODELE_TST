@@ -14,4 +14,11 @@ public class Cibles {
 	 * Bouton de recherche google.
 	 */
 	public static final CibleBean VALIDER_RECHERCHE = new CibleBean(Clefs.VALEUR, "Recherche Google");
+	
+	/*
+	Exemple samy crédit 
+	*/
+	
+	public static final CibleBean SELECTION_CIVILITE_SAMY = new CibleBean(Clefs.VALEUR, "Mme");
+	
 }
