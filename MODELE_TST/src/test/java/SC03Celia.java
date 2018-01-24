@@ -41,38 +41,23 @@ public class SC03Celia extends SC00Modele {
               // Attente de l'affichage du titre de la page
               outil.attendreChargementPage(titre);
               
-              // Remplir le formulaire et le valider
-              outil.action(Actions.VIDER_ET_SAISIR, Cibles.SAISIE_MONTANT_EPARGNE, "5000");
-              outil.action(Actions.VIDER_ET_SAISIR, Cibles.SAISIE_DATE_DISPO, "15/10/2018");
-              outil.action(Actions.CLIQUER, Cibles.VALIDER_FORMULAIRE_DEMO);
+              	// Remplir l identite 
+      			outil.action(Actions.SELECTIONNER, Cibles.SELECTION_CIVILITE_SAMY, "HOMME"); 
+      			outil.action(Actions.VIDER_ET_SAISIR, Cibles.SELECTION_NOM_SAMY, "LEMONSIEUR"); 
+      			outil.action(Actions.VIDER_ET_SAISIR, Cibles.SELECTION_PRENOM_SAMY, "KEVIN"); 
+      			//Saisir la date naissance
+      			outil.action(Actions.VIDER_ET_SAISIR, Cibles.SELECTION_dateNaissance_SAMY, "12/12/1970"); 
+      			//Saisir le mail
+      			outil.action(Actions.VIDER_ET_SAISIR, Cibles.SELECTION_email_SAMY, "ichiroubh@gmail.com"); 
+      			//Saisir le numéro de portable 
+      			outil.action(Actions.VIDER_ET_SAISIR, Cibles.SELECTION_telPortable_SAMY, "0610109436");
+      			//Saisir le montant 
+      			outil.action(Actions.VIDER_ET_SAISIR, Cibles.SAISIE_MONTANT_EPARGNE, "5000");
+      			//Saisir la date de disponibilite
+      			outil.action(Actions.VIDER_ET_SAISIR, Cibles.SAISIE_DATE_DISPO, "15/10/2018");
+      			//Valider le formulaire
+      			outil.action(Actions.CLIQUER, Cibles.VALIDER_FORMULAIRE_DEMO);
 
        }
-       
-       /**
-       * Permet d'obtenir la boite a outil Selenium associe a un driver pour le scenario donne.
-       * @param scenario0 le scenario concerne.
-       * @return la boite a outil Selenium associee au scenario.
-       */
-       public SeleniumOutils obtenirDriver(CasEssaiModeleBean scenario0) {
-              //Configuration du driver
-              FirefoxBinary ffBinary = new FirefoxBinary(new File(Constantes.EMPLACEMENT_FIREFOX));
-              FirefoxProfile profile = configurerProfilNatixis();
-
-              if (scenario0.getRepertoireTelechargement() == null) { 
-                     String repertoire = creerRepertoireTelechargement(scenario0, profile);
-                     scenario0.setRepertoireTelechargement(repertoire);
-                     this.setRepertoireTelechargement(repertoire);
-              }
-              // Initialisation du driver
-              //FirefoxImpl driver = new FirefoxImpl(ffBinary, profile);
-              FirefoxImpl driver = new FirefoxImpl(profile);
-              
-              driver.get(Constantes.CELIA_SAMY);
-
-              
-           SeleniumOutils outil = new SeleniumOutils(driver, GenericDriver.FIREFOX_IMPL);
-           outil.setRepertoireRacine(scenario0.getRepertoireTelechargement());
-              
-              return outil;
-       }
+    
 }
