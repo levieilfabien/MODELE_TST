@@ -24,4 +24,7 @@ public class Constantes {
 	//// Exemple pour samy crédit ////
 	public static final String URL_SAMY_FATIMA = PropertiesOutil.getInfoConstante("URL_SAMY");
 	public static final String TITRE_PAGE_SAMY = "Instant";
+	public static final String FABIEN_URL_SAMY = PropertiesOutil.getInfoConstante("URL_SAMY");
+	public static final String FABIEN_TITRE_SAMY = "Instant";
+
 }
