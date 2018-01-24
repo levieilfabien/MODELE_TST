@@ -33,7 +33,7 @@ public class SC03Celia extends SC00Modele {
            
               ///////////////////////////////////////////////////EXECUTION////////////////////////////////////////////////
               String url = Constantes.CELIA_SAMY;
-              String titre = Constantes.TITRE_PAGE;
+              String titre = Constantes.FABIEN_TITRE_SAMY;
 
               // Accès à google
               outil.chargerUrl(url);

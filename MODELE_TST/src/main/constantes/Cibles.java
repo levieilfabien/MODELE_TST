@@ -32,11 +32,11 @@ public class Cibles {
 	/**
 	 * Selecteur saisie du montant epargne.
 	 */
-	public static final CibleBean SAISIE_MONTANT_EPARGNE = new CibleBean(Clefs.ID, "field_montantepargne");
+	public static final CibleBean SAISIE_MONTANT_EPARGNE = new CibleBean(Clefs.ID, "montantEpargneSalarial");
 	/**
 	 * Selecteur saisie de la date de disponibilite epargne.
 	 */
-	public static final CibleBean SAISIE_DATE_DISPO = new CibleBean(Clefs.ID, "field_datedisponibilite");
+	public static final CibleBean SAISIE_DATE_DISPO = new CibleBean(Clefs.ID, "dateDisponibiliteEpargneSalarial");
 	/**
 	 * Bouton acces samy credit.
 	 */
