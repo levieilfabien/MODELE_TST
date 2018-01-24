@@ -2,12 +2,16 @@ package test.java;
 
 import java.io.File;
 
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.firefox.internal.ProfilesIni;
 
 import beans.CasEssaiBean;
 import exceptions.SeleniumException;
+import main.bean.CasEssaiModeleBean;
 import main.constantes.Constantes;
+import moteurs.FirefoxImpl;
+import moteurs.GenericDriver;
 import outils.ALMOutils;
 import outils.SeleniumOutils;
 import outils.XLSOutils;
@@ -171,6 +175,34 @@ public class SC00Modele extends CasEssaiBean {
 		outil.attendreChargementPage(titre);
 
 		return "OK";
+	}
+	
+	/**
+	 * Permet d'obtenir la boite a outil Selenium associe a un driver pour le scenario donne.
+	 * @param scenario0 le scenario concerne.
+	 * @return la boite a outil Selenium associee au scenario.
+	 */
+	public SeleniumOutils obtenirDriver(CasEssaiModeleBean scenario0) {
+		//Configuration du driver
+		FirefoxBinary ffBinary = new FirefoxBinary(new File(Constantes.EMPLACEMENT_FIREFOX));
+		FirefoxProfile profile = configurerProfilNatixis();
+
+		if (scenario0.getRepertoireTelechargement() == null) { 
+			String repertoire = creerRepertoireTelechargement(scenario0, profile);
+			scenario0.setRepertoireTelechargement(repertoire);
+			this.setRepertoireTelechargement(repertoire);
+		}
+		// Initialisation du driver
+		//FirefoxImpl driver = new FirefoxImpl(ffBinary, profile);
+		FirefoxImpl driver = new FirefoxImpl(profile);
+		
+		driver.get(Constantes.URL_GOOGLE);
+
+		
+	    SeleniumOutils outil = new SeleniumOutils(driver, GenericDriver.FIREFOX_IMPL);
+	    outil.setRepertoireRacine(scenario0.getRepertoireTelechargement());
+		
+		return outil;
 	}
 	
 }
