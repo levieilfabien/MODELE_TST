@@ -29,5 +29,4 @@ public class Cibles {
 	 * Selecteur saisie du nom.
 	 */
 	public static final CibleBean SELECTION_NOM_SAMY = new CibleBean(Clefs.ID, "field_nom");
-	
 }
