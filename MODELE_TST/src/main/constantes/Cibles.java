@@ -29,4 +29,16 @@ public class Cibles {
 	 * Selecteur saisie du nom.
 	 */
 	public static final CibleBean SELECTION_NOM_SAMY = new CibleBean(Clefs.ID, "field_nom");
+	/**
+	 * Date de naissance
+	 */
+	public static final CibleBean SELECTION_dateNaissance_SAMY = new CibleBean(Clefs.ID, "field_dateNaissance");
+	/**
+	 * @mail
+	 */
+	public static final CibleBean SELECTION_email_SAMY = new CibleBean(Clefs.ID, "field_email");
+	/**
+	 * portable 
+	 */
+	public static final CibleBean SELECTION_telPortable_SAMY = new CibleBean(Clefs.ID, "telPortable");
 }
