@@ -30,7 +30,6 @@ public class Cibles {
 	 */
 	public static final CibleBean SELECTION_NOM_SAMY = new CibleBean(Clefs.ID, "field_nom");
 	/**
-<<<<<<< HEAD
 	 * Selecteur saisie du montant epargne.
 	 */
 	public static final CibleBean SAISIE_MONTANT_EPARGNE = new CibleBean(Clefs.ID, "field_montantepargne");
@@ -43,8 +42,6 @@ public class Cibles {
 	 */
 	public static final CibleBean VALIDER_FORMULAIRE_DEMO = new CibleBean(Clefs.VALEUR, "submit");
 	/**
-=======
->>>>>>> branch 'master' of https://github.com/levieilfabien/MODELE_TST.git
 	 * Date de naissance
 	 */
 	public static final CibleBean SELECTION_dateNaissance_SAMY = new CibleBean(Clefs.ID, "field_dateNaissance");
