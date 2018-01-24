@@ -47,4 +47,31 @@ public class SC01Acces extends SC00Modele {
 
 	}
 	
+	/**
+	 * Permet d'obtenir la boite a outil Selenium associe a un driver pour le scenario donne.
+	 * @param scenario0 le scenario concerne.
+	 * @return la boite a outil Selenium associee au scenario.
+	 */
+	public SeleniumOutils obtenirDriver(CasEssaiModeleBean scenario0) {
+		//Configuration du driver
+		FirefoxBinary ffBinary = new FirefoxBinary(new File(Constantes.EMPLACEMENT_FIREFOX));
+		FirefoxProfile profile = configurerProfilNatixis();
+
+		if (scenario0.getRepertoireTelechargement() == null) { 
+			String repertoire = creerRepertoireTelechargement(scenario0, profile);
+			scenario0.setRepertoireTelechargement(repertoire);
+			this.setRepertoireTelechargement(repertoire);
+		}
+		// Initialisation du driver
+		//FirefoxImpl driver = new FirefoxImpl(ffBinary, profile);
+		FirefoxImpl driver = new FirefoxImpl(profile);
+		
+		driver.get(Constantes.URL_GOOGLE);
+
+		
+	    SeleniumOutils outil = new SeleniumOutils(driver, GenericDriver.FIREFOX_IMPL);
+	    outil.setRepertoireRacine(scenario0.getRepertoireTelechargement());
+		
+		return outil;
+	}
 }

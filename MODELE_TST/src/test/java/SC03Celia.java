@@ -15,7 +15,7 @@ import moteurs.FirefoxImpl;
 import moteurs.GenericDriver;
 import outils.SeleniumOutils;
 
-public class SC03Acces extends SC00Modele {
+public class SC03Celia extends SC00Modele {
 
 	/**
 	 * Id de serialisation.
