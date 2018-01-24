@@ -16,12 +16,6 @@ import moteurs.GenericDriver;
 import outils.SeleniumOutils;
 
 public class SC02Fatima extends SC00Modele {
-
-	/**
-	 * Id de serialisation.
-	 */
-	private static final long serialVersionUID = 1L;
-
 	@Test
 	public void accesTest() throws SeleniumException {
 		
@@ -41,10 +35,16 @@ public class SC02Fatima extends SC00Modele {
 		// Attente de l'affichage du titre de la page
 		outil.attendreChargementPage(titre);
 		
-		// Faire une recherche google
-		outil.action(Actions.VIDER_ET_SAISIR, Cibles.SELECTION_CIVILITE_SAMY, "Mme");
-		outil.action(Actions.CLIQUER, Cibles.SELECTION_CIVILITE_SAMY);
-
+		// Faire une saisie dans le formulaire de Mock
+		outil.action(Actions.SELECTIONNER, Cibles.SELECTION_CIVILITE_SAMY, "HOMME"); 
+		outil.action(Actions.VIDER_ET_SAISIR, Cibles.SELECTION_NOM_SAMY, "LEMONSIEUR"); 
+		outil.action(Actions.VIDER_ET_SAISIR, Cibles.SELECTION_PRENOM_SAMY, "KEVIN"); 
+		//Saisir la date naissance
+		outil.action(Actions.VIDER_ET_SAISIR, Cibles.SELECTION_dateNaissance_SAMY, "12/12/1970"); 
+		//Saisir le mail
+		outil.action(Actions.VIDER_ET_SAISIR, Cibles.SELECTION_email_SAMY, "ichiroubh@gmail.com"); 
+		//Saisir le numéro de portable 
+		outil.action(Actions.VIDER_ET_SAISIR, Cibles.SELECTION_telPortable_SAMY, "0610109436"); 
 	}
 	
 	/**
@@ -68,10 +68,12 @@ public class SC02Fatima extends SC00Modele {
 		
 		driver.get(Constantes.URL_SAMY_FATIMA);
 
-		
 	    SeleniumOutils outil = new SeleniumOutils(driver, GenericDriver.FIREFOX_IMPL);
 	    outil.setRepertoireRacine(scenario0.getRepertoireTelechargement());
 		
 		return outil;
 	}
 }
+
+
+

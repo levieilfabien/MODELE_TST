@@ -29,4 +29,28 @@ public class Cibles {
 	 * Selecteur saisie du nom.
 	 */
 	public static final CibleBean SELECTION_NOM_SAMY = new CibleBean(Clefs.ID, "field_nom");
+	/**
+	 * Selecteur saisie du montant epargne.
+	 */
+	public static final CibleBean SAISIE_MONTANT_EPARGNE = new CibleBean(Clefs.ID, "field_montantepargne");
+	/**
+	 * Selecteur saisie de la date de disponibilite epargne.
+	 */
+	public static final CibleBean SAISIE_DATE_DISPO = new CibleBean(Clefs.ID, "field_datedisponibilite");
+	/**
+	 * Bouton acces samy credit.
+	 */
+	public static final CibleBean VALIDER_FORMULAIRE_DEMO = new CibleBean(Clefs.VALEUR, "submit");
+	/**
+	 * Date de naissance
+	 */
+	public static final CibleBean SELECTION_dateNaissance_SAMY = new CibleBean(Clefs.ID, "field_dateNaissance");
+	/**
+	 * @mail
+	 */
+	public static final CibleBean SELECTION_email_SAMY = new CibleBean(Clefs.ID, "field_email");
+	/**
+	 * portable 
+	 */
+	public static final CibleBean SELECTION_telPortable_SAMY = new CibleBean(Clefs.ID, "telPortable");
 }

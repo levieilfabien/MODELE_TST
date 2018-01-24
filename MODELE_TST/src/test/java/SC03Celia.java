@@ -41,9 +41,10 @@ public class SC03Celia extends SC00Modele {
 		// Attente de l'affichage du titre de la page
 		outil.attendreChargementPage(titre);
 		
-		// Faire une recherche google
-		//outil.action(Actions.VIDER_ET_SAISIR, Cibles.SAISIE_RECHERCHE, "Celia");
-		//outil.action(Actions.CLIQUER, Cibles.VALIDER_RECHERCHE);
+		// R
+		outil.action(Actions.VIDER_ET_SAISIR, Cibles.SAISIE_MONTANT_EPARGNE, "5000");
+		outil.action(Actions.VIDER_ET_SAISIR, Cibles.SAISIE_DATE_DISPO, "15/10/2018");
+		outil.action(Actions.CLIQUER, Cibles.VALIDER_FORMULAIRE_DEMO);
 
 	}
 	
